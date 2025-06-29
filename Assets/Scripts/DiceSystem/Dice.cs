@@ -5,6 +5,8 @@ namespace DiceSystem
     [RequireComponent(typeof(Rigidbody))]
     public class Dice : MonoBehaviour
     {
+        public static Dice Instance;
+        
         private Rigidbody rb;
         private bool hasRolled;
         private int lastResult = -1;
@@ -12,6 +14,15 @@ namespace DiceSystem
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
+            
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void Update()
@@ -78,7 +89,17 @@ namespace DiceSystem
             return result;
         }
 
-        public int GetResult() => lastResult;
+        public int GetResult()
+        {
+            if (rb.IsSleeping())
+            {
+                return lastResult;
+            }
+            else
+            {
+                return -1;
+            }
+        }
 
         public bool IsRolling() => !rb.IsSleeping();
     }

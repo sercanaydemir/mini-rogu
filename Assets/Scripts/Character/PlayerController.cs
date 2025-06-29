@@ -2,7 +2,7 @@
 
 namespace Character
 {
-    public class CharacterController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         [SerializeField] private CharacterStats stats;
         

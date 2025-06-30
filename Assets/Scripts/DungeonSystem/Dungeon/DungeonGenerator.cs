@@ -7,6 +7,7 @@ namespace DungeonSystem
 {
     public class DungeonGenerator : MonoBehaviour
     {
+        [SerializeField] private RoomManager roomManager;
         [SerializeField] private DungeonPool pool;
         [SerializeField] private DungeonScheme scheme;
         [SerializeField] private Transform areaStartPoint;
@@ -21,15 +22,29 @@ namespace DungeonSystem
 
         private void GenerateDungeon()
         {
+            if (roomManager == null)
+            {
+                Debug.LogError("RoomManager is not assigned in DungeonGenerator.");
+                return;
+            }
+            
+            if (pool == null)
+            {
+                Debug.LogError("DungeonPool is not assigned in DungeonGenerator.");
+                return;
+            }
+            
+            var roomData = roomManager.GetRoomsRandom();
+            
             for (int i = 0; i < scheme.Scheme.Length; i++)
             {
                 int rowCount = scheme.Scheme[i];
 
-                CreateRooms(rowCount, i);
+                CreateRooms(rowCount, i,roomData[i]);
             }
         }
 
-        void CreateRooms(int rowCount,int lineOrder)
+        void CreateRooms(int rowCount,int lineOrder,ARoomDataSO roomDataSo)
         {
             int mod = rowCount % 2;
 
@@ -40,7 +55,7 @@ namespace DungeonSystem
                 if (index <= 1)
                 {
                     RoomController rc = pool.GetRoom();
-                    rc.InitializeRoom(CalculateDungeonPosition(0,lineOrder));
+                    rc.InitializeRoom(roomDataSo,CalculateDungeonPosition(0,lineOrder));
                 }
                 
             }
@@ -52,7 +67,7 @@ namespace DungeonSystem
                 for (int i = 0; i < rowCount; i++)
                 {
                     RoomController rc = pool.GetRoom();
-                    rc.InitializeRoom(startPos + new Vector3(i * horizontalRoomSpacing, 0, 0));
+                    rc.InitializeRoom(roomDataSo,startPos + new Vector3(i * horizontalRoomSpacing, 0, 0));
                 }
 
             }

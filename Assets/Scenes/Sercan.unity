@@ -2033,6 +2033,8 @@ GameObject:
   - component: {fileID: 1226442677}
   - component: {fileID: 1226442676}
   - component: {fileID: 1226442675}
+  - component: {fileID: 1226442679}
+  - component: {fileID: 1226442678}
   m_Layer: 0
   m_Name: DungeonGenerator
   m_TagString: Untagged
@@ -2065,13 +2067,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab2027797164083a79526977dd2a27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomManager: {fileID: 1226442678}
   pool: {fileID: 1226442675}
   scheme:
     Scheme: 01000000020000000100000002000000
   areaStartPoint: {fileID: 181715765}
   horizontalRoomSpacing: 10
   verticalRoomSpacing: 10
-  rooms: []
+  rooms:
+  - {fileID: 0}
 --- !u!4 &1226442677
 Transform:
   m_ObjectHideFlags: 0
@@ -2087,6 +2091,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1226442678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226442674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de97d98f444842b692aaf45b5c1d7741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomDataArray:
+  - {fileID: 11400000, guid: 6fab9c86cc8de99459f893317af53442, type: 2}
+  - {fileID: 11400000, guid: 6c92ad9fe9e606a488bf76c6e4ef70f6, type: 2}
+  - {fileID: 11400000, guid: a9865f2a2bc71a441a660240f3478c63, type: 2}
+  - {fileID: 11400000, guid: 4be14f9130ce2e8409c8b0666508e5f6, type: 2}
+  - {fileID: 11400000, guid: 3fac3c0d9dfea0c428e7310bb2cde314, type: 2}
+  - {fileID: 11400000, guid: 4d50b4cb8b92bc848993e113f9244b13, type: 2}
+  bossRoomData: {fileID: 11400000, guid: 787e46d4e04b3f046a004c44288174e2, type: 2}
+--- !u!114 &1226442679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226442674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d2d96b396d452eb01bc1199881ef65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1274699276
 GameObject:
   m_ObjectHideFlags: 0

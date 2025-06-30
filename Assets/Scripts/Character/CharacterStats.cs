@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Character
 {
@@ -17,8 +18,8 @@ namespace Character
         public int XP;
         public int Rank; // Starts from 1
 
-        // XP thresholds for each Rank level
-        private static readonly int[] XPThresholds = { 0, 5, 10, 17, 25 };
+        // XP thresholds for each Rank level (Rank 1 starts at 0)
+        private static readonly int[] XPThresholds = { 0, 6, 18, 36 };
 
         // Initializes default character stats at the beginning of the game
         public void Initialize()
@@ -46,7 +47,13 @@ namespace Character
             {
                 if (XP >= XPThresholds[i])
                 {
-                    Rank = i + 1;
+                    int newRank = i + 1;
+                    if (newRank > Rank)
+                    {
+                        Rank = newRank;
+                        OnCharacterLevelUp?.Invoke(Rank);
+                        IncreaseMaxHp(2);
+                    }
                     return;
                 }
             }
@@ -57,7 +64,7 @@ namespace Character
         // Returns the number of dice the character can roll based on current rank
         public int GetDiceCount()
         {
-            return Mathf.Min(4, Rank); // Max 3 dice
+            return Mathf.Min(4, Rank); // Max 4 dice
         }
 
         // Consumes 1 food. If no food left, applies starvation penalty.
@@ -93,5 +100,18 @@ namespace Character
 
             Debug.Log($"Took {damageAfterArmor} damage after armor. Remaining HP: {HP}, Armor: {Armor}");
         }
+
+        public void IncreaseMaxHp(int amount)
+        {
+            MaxHP += amount;
+            HP = Mathf.Min(HP + amount, MaxHP); // Heal if current HP is less than new MaxHP
+            Debug.Log($"Max HP increased by {amount}. New Max HP: {MaxHP}, Current HP: {HP}");
+        }
+
+        #region Events
+
+        public static event Action<int> OnCharacterLevelUp;
+
+        #endregion
     }
 }

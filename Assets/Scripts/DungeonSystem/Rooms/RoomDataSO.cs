@@ -6,6 +6,18 @@ namespace DungeonSystem
     public class RoomDataSO : ScriptableObject
     {
         public string RoomName;
-        
+        public RoomType roomType;
+
+    }
+    
+    public enum RoomType
+    {
+        Monster,
+        Boss,
+        Treasure,
+        Merchant,
+        Resting,
+        Event,
+        Trap
     }
 }

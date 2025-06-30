@@ -380,6 +380,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165880064}
   m_CullTransparentMesh: 1
+--- !u!1 &171351651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 171351652}
+  m_Layer: 6
+  m_Name: Slot 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &171351652
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171351651}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1999989, y: -4.73755, z: 0.28755188}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1333739848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181715764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1310,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516736302}
   m_CullTransparentMesh: 1
+--- !u!1 &529061144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529061145}
+  m_Layer: 6
+  m_Name: Slot 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &529061145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529061144}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1999989, y: -4.73755, z: 1.637558}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1333739848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588152117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,12 +1821,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Name
-      value: Dice (2)
+      value: Dice 2
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8400689653197103859, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
+      propertyPath: diceSlot
+      value: 
+      objectReference: {fileID: 171351652}
     - target: {fileID: 9053427391603995082, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -2548,12 +2614,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Name
-      value: Dice
+      value: Dice 1
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8400689653197103859, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
+      propertyPath: diceSlot
+      value: 
+      objectReference: {fileID: 1252394400}
     - target: {fileID: 9053427391603995082, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -2811,6 +2881,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1252394399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252394400}
+  m_Layer: 6
+  m_Name: Slot 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1252394400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252394399}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12999916, y: -4.73755, z: 0.28755188}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1333739848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274699276
 GameObject:
@@ -3355,6 +3456,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1252394400}
+  - {fileID: 171351652}
+  - {fileID: 1846339066}
+  - {fileID: 529061145}
   - {fileID: 1025814102}
   - {fileID: 1556114053}
   - {fileID: 793654032}
@@ -5160,12 +5265,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Name
-      value: Dice (3)
+      value: Dice 4
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8400689653197103859, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
+      propertyPath: diceSlot
+      value: 
+      objectReference: {fileID: 529061145}
     - target: {fileID: 9053427391603995082, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -5450,6 +5559,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1333739848}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1846339065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846339066}
+  m_Layer: 6
+  m_Name: Slot 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846339066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846339065}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12999916, y: -4.73755, z: 1.637558}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1333739848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1912500132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5698,12 +5838,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Name
-      value: Dice (1)
+      value: Dice 3
       objectReference: {fileID: 0}
     - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8400689653197103859, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
+      propertyPath: diceSlot
+      value: 
+      objectReference: {fileID: 1846339066}
     - target: {fileID: 9053427391603995082, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5

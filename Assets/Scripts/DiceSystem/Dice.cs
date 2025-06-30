@@ -5,7 +5,8 @@ namespace DiceSystem
     [RequireComponent(typeof(Rigidbody))]
     public class Dice : MonoBehaviour
     {
-       
+        [SerializeField] private Transform diceSlot;
+        
         private Rigidbody rb;
         private bool hasRolled;
         private int lastResult = -1;
@@ -32,6 +33,10 @@ namespace DiceSystem
                 hasRolled = true;
                 lastResult = CalculateResult();
                 Debug.Log($"🎲 Dice Result is: {lastResult}");
+
+                transform.position = diceSlot.position;
+                transform.rotation = diceSlot.rotation;
+                rb.isKinematic = true; 
             }
         }
 

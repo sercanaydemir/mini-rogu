@@ -5,8 +5,7 @@ namespace DiceSystem
     [RequireComponent(typeof(Rigidbody))]
     public class Dice : MonoBehaviour
     {
-        public static Dice Instance;
-        
+       
         private Rigidbody rb;
         private bool hasRolled;
         private int lastResult = -1;
@@ -14,15 +13,6 @@ namespace DiceSystem
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
-            
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
         }
 
         private void Update()

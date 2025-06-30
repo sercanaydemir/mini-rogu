@@ -57,7 +57,7 @@ namespace Character
         // Returns the number of dice the character can roll based on current rank
         public int GetDiceCount()
         {
-            return Mathf.Min(3, Rank); // Max 3 dice
+            return Mathf.Min(4, Rank); // Max 3 dice
         }
 
         // Consumes 1 food. If no food left, applies starvation penalty.

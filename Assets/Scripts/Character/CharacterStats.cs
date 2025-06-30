@@ -24,7 +24,8 @@ namespace Character
         // Initializes default character stats at the beginning of the game
         public void Initialize()
         {
-            HP = MaxHP = 10;
+            HP = 5;
+            MaxHP = 20; 
             Armor = 0;
             Gold = 0;
             Food = 3;
@@ -52,7 +53,6 @@ namespace Character
                     {
                         Rank = newRank;
                         OnCharacterLevelUp?.Invoke(Rank);
-                        IncreaseMaxHp(2);
                     }
                     return;
                 }
@@ -100,14 +100,7 @@ namespace Character
 
             Debug.Log($"Took {damageAfterArmor} damage after armor. Remaining HP: {HP}, Armor: {Armor}");
         }
-
-        public void IncreaseMaxHp(int amount)
-        {
-            MaxHP += amount;
-            HP = Mathf.Min(HP + amount, MaxHP); // Heal if current HP is less than new MaxHP
-            Debug.Log($"Max HP increased by {amount}. New Max HP: {MaxHP}, Current HP: {HP}");
-        }
-
+        
         #region Events
 
         public static event Action<int> OnCharacterLevelUp;

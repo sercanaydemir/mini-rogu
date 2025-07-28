@@ -26,7 +26,7 @@ namespace DungeonSystem
         
         public void ResetRoomPosition()
         {
-            transform.position = initialPosition;
+            transform.position = initialPosition; 
             //Debug.Log($"Room '{roomData.RoomName}' reset to initial position.");
         }
         

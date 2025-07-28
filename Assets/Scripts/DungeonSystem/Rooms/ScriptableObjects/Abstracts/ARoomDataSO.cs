@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using DungeonSystem.RoomActions;
+using NUnit.Framework;
 using UnityEngine;
 
 namespace DungeonSystem
@@ -11,6 +13,15 @@ namespace DungeonSystem
         public RoomInteractionType interactionType;
         public Sprite roomSprite;
         public string description;
+        
+        public ARoomActionSO enterAction;
+        public ARoomActionSO exitAction;
+        public List<ARoomActionSO> loopActions;
+        
+        public virtual void Initialize()
+        {
+            // Base initialization logic, if any
+        }
         
     }
     

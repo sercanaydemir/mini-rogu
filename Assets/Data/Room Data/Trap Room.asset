@@ -15,8 +15,11 @@ MonoBehaviour:
   RoomName: Trap Room
   roomType: 6
   interactionType: 0
-  roomSprite: {fileID: 539499323, guid: 87f14177587df27408b4347df747977d, type: 3}
+  roomSprite: {fileID: -295591543, guid: 87f14177587df27408b4347df747977d, type: 3}
   description: 
+  enterAction: {fileID: 0}
+  exitAction: {fileID: 0}
+  loopActions: []
   trapData:
     damageOnFail: 0
     xpRewardOnSuccess: 0

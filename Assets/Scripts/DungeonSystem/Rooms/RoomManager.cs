@@ -10,7 +10,10 @@ namespace DungeonSystem
         
         public ARoomDataSO[] GetRoomsRandom()
         {
-            return ArrayShuffler.GetShuffledArray(roomDataArray);
+            
+            var roomsData = ArrayShuffler.GetShuffledArray(roomDataArray);
+            
+            return roomsData;
         }
         
         public ARoomDataSO GetBossRoom()

@@ -7,7 +7,7 @@ public static class ArrayShuffler
 
     public static T[] GetShuffledArray<T>(T[] original)
     {
-        T[] copy = (T[])original.Clone(); // Clone to avoid modifying original
+        T[] copy = (T[])original.Clone();
         int n = copy.Length;
 
         while (n > 1)
@@ -18,6 +18,7 @@ public static class ArrayShuffler
 
         return copy;
     }
+    
     public static void Shuffle<T>(T[] array)
     {
         int n = array.Length;

@@ -1841,6 +1841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dice
       objectReference: {fileID: 0}
+    - target: {fileID: 8338808697269814167, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9053427391603995082, guid: 7f65b44c8e3217247a0097e853338926, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
